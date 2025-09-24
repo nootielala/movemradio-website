@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOV'EMRADIO - 24/7 Music Streaming & Artist Radio" />
+  <title>Radio | MOV'EMRADIO</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="MOV'EM RADIO Home">
+      <a href="home.html">MOV'EM<span style="color: #ff0000;">RADIO</span></a>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <ul id="navMenu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="elite-artists.html">Elite Artists</a></li>
+        <li><a href="radio.html" class="active">Radio</a></li>
+        <li><a href="movemradiotv.html">MOV'EMRADIOTV</a></li>
+        <li><a href="elite-artist-program.html">Program</a></li>
+        <li><a href="music-submission.html">Submit Music</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="content">
+    <!-- Radio Hero Section -->
+    <section class="hero" style="background: radial-gradient(circle at 30% 30%, #1f1f24, #0b0b0d 60%); padding: 4rem 1rem 3rem;">
+      <div class="hero-inner">
+        <!-- MOV'EMRADIO Logo -->
+        <div style="margin-bottom: 2rem;">
+          <img src="img/movem-radio-logo.png" alt="MOV'EMRADIO" style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 8px 32px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));" />
+        </div>
+        <h1 id="radioHeading" style="font-size: clamp(2.5rem, 6vw, 4rem); margin: 0 0 1rem; letter-spacing: 1px;">MOV'EMRADIO Live</h1>
+        <p class="tagline">24/7 Independent Music • Live Streaming • Elite Artists</p>
+      </div>
+    </section>
+
+    <section class="page-section radio" aria-labelledby="radioHeading">
+      <div class="container">
+
+        <div class="player-placeholder" aria-label="Streaming Player Placeholder">
+          <p>Status: <strong id="streamStatus">Offline</strong></p>
+          <div class="embed-box">
+            <p>Streaming player coming soon.</p>
+            <p>In the meantime, check out our <a href="elite-artists.html" style="color: var(--accent);">Elite Artists</a> and their personal radio streams!</p>
+          </div>
+        </div>
+
+        <section class="radio-features">
+          <h2>Radio Features</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>🎵 Elite Artist Radio</h3>
+              <p>Each of our 6 elite artists has their own 24/7 radio stream with curated playlists. You can even upload your own music to their collections!</p>
+              <a href="elite-artists.html" class="feature-link">Artist Radio Streams →</a>
+            </div>
+            
+            <div class="feature-card">
+              <h3>📱 Interactive Experience</h3>
+              <p>Upload your music, discover new artists, and be part of the MoveM Radio community with our interactive features.</p>
+              <a href="elite-artists.html" class="feature-link">Try It Now →</a>
+            </div>
+
+            <div class="feature-card">
+              <h3>🌍 Global Reach</h3>
+              <p>Connect with music lovers worldwide through our platform that celebrates diversity and cultural exchange.</p>
+              <a href="about.html" class="feature-link">Learn More →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Live Radio Simulator -->
+        <section class="live-radio-section">
+          <h2>Demo Radio Player</h2>
+          <div class="radio-player">
+            <h3>MoveM Radio Demo Stream</h3>
+            <div class="player-controls">
+              <audio id="demoPlayer" controls>
+                Your browser does not support the audio element.
+              </audio>
+              <div class="player-info">
+                <div id="nowPlaying" class="now-playing">Now Playing: Select a demo track</div>
+                <div id="playerStatus" class="player-status">Ready to play demo tracks</div>
+              </div>
+            </div>
+            
+            <div class="demo-tracks">
+              <h4>Demo Tracks</h4>
+              <div class="track-list">
+                <div class="track-item">
+                  <div class="track-info">
+                    <span class="track-title">Chill Ambient Mix</span>
+                    <span class="track-duration">Demo</span>
+                  </div>
+                  <button class="play-btn" onclick="playDemo('Chill Ambient Mix')" aria-label="Play Chill Ambient Mix">▶</button>
+                </div>
+                
+                <div class="track-item">
+                  <div class="track-info">
+                    <span class="track-title">Electronic Vibes</span>
+                    <span class="track-duration">Demo</span>
+                  </div>
+                  <button class="play-btn" onclick="playDemo('Electronic Vibes')" aria-label="Play Electronic Vibes">▶</button>
+                </div>
+                
+                <div class="track-item">
+                  <div class="track-info">
+                    <span class="track-title">Global Fusion Beat</span>
+                    <span class="track-duration">Demo</span>
+                  </div>
+                  <button class="play-btn" onclick="playDemo('Global Fusion Beat')" aria-label="Play Global Fusion Beat">▶</button>
+                </div>
+                
+                <div class="track-item">
+                  <div class="track-info">
+                    <span class="track-title">Urban Soul Session</span>
+                    <span class="track-duration">Demo</span>
+                  </div>
+                  <button class="play-btn" onclick="playDemo('Urban Soul Session')" aria-label="Play Urban Soul Session">▶</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="upcoming" aria-label="Upcoming Features">
+          <h2>Coming Soon</h2>
+          <div class="upcoming-grid">
+            <div class="upcoming-item">
+              <h3>📅 Live Show Schedule</h3>
+              <p>Dedicated time slots for artist takeovers and special events</p>
+            </div>
+            
+            <div class="upcoming-item">
+              <h3>💬 Interactive Chat</h3>
+              <p>Real-time listener engagement during live shows</p>
+            </div>
+            
+            <div class="upcoming-item">
+              <h3>🎪 Artist Takeovers</h3>
+              <p>Special sessions where artists curate their own programming</p>
+            </div>
+            
+            <div class="upcoming-item">
+              <h3>🎵 Community Playlists</h3>
+              <p>Collaborative playlists created by our listening community</p>
+            </div>
+            
+            <div class="upcoming-item">
+              <h3>🔴 Live Events</h3>
+              <p>Streaming concerts and exclusive performances</p>
+            </div>
+            
+          </div>
+        </section>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 MoveM Radio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Navigation toggle
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const navToggle = document.querySelector('.nav-toggle');
+      
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    // Play demo track with API integration
+    async function playDemo(trackTitle) {
+      const audio = document.getElementById('demoPlayer');
+      const nowPlaying = document.getElementById('nowPlaying');
+      const playerStatus = document.getElementById('playerStatus');
+      
+      nowPlaying.textContent = `Now Playing: ${trackTitle}`;
+      playerStatus.textContent = `Playing demo: ${trackTitle}`;
+      
+      // Demo audio URLs (you can replace these with your actual files)
+      const demoAudio = {
+        'Chill Ambient Mix': 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav',
+        'Electronic Vibes': 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav',
+        'Global Fusion Beat': 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav',
+        'Urban Soul Session': 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
+      };
+      
+      try {
+        // Try to get stream URL from API
+        const response = await fetch(`http://localhost:3000/api/stream/demo/${encodeURIComponent(trackTitle)}`);
+        if (response.ok) {
+          const streamData = await response.json();
+          if (streamData.streamUrl) {
+            audio.src = streamData.streamUrl;
+            await audio.play();
+            console.log('Playing from API stream:', streamData.streamUrl);
+            return;
+          }
+        }
+      } catch (error) {
+        console.log('API stream failed, using demo mode:', error);
+      }
+      
+      // Use demo audio files
+      if (demoAudio[trackTitle]) {
+        audio.src = demoAudio[trackTitle];
+        try {
+          await audio.play();
+          console.log(`Playing demo: ${trackTitle}`);
+        } catch (error) {
+          console.log('Demo audio failed:', error);
+          playerStatus.textContent = `Demo: ${trackTitle} (Audio not available - add your audio files to the uploads folder)`;
+        }
+      } else {
+        playerStatus.textContent = `Demo: ${trackTitle} (No audio file configured)`;
+      }
+    }
+
+    // Update live stats with API integration
+    async function updateStats() {
+      try {
+        // Try to fetch real stats from API
+        const response = await fetch('http://localhost:3000/api/stats');
+        if (response.ok) {
+          const stats = await response.json();
+          
+          // Update with real data
+          document.getElementById('listeners').textContent = stats.listeners.toLocaleString();
+          document.getElementById('uploads').textContent = stats.uploads;
+          document.getElementById('tracks').textContent = stats.tracks;
+          
+          console.log('Radio stats updated from API');
+          return;
+        }
+      } catch (error) {
+        console.log('API stats fetch failed, using simulation:', error);
+      }
+      
+      // Fallback to simulation
+      const listeners = document.getElementById('listeners');
+      const uploads = document.getElementById('uploads');
+      
+      // Simulate changing listener count
+      const currentListeners = parseInt(listeners.textContent.replace(',', ''));
+      const change = Math.floor(Math.random() * 20) - 10; // -10 to +10
+      const newCount = Math.max(1000, currentListeners + change);
+      listeners.textContent = newCount.toLocaleString();
+      
+      // Simulate upload count (would be real data from backend)
+      const currentUploads = parseInt(uploads.textContent);
+      if (Math.random() > 0.95) { // 5% chance to increment
+        uploads.textContent = currentUploads + 1;
+      }
+    }
+
+    // Update stream status with API integration
+    async function updateStreamStatus() {
+      try {
+        // Try to get real stream status from API
+        const response = await fetch('http://localhost:3000/api/radio/status');
+        if (response.ok) {
+          const statusData = await response.json();
+          const status = document.getElementById('streamStatus');
+          
+          status.textContent = statusData.status;
+          
+          // Update status color based on state
+          status.style.color = statusData.status === 'Live' ? '#00ff00' : 
+                              statusData.status === 'Offline' ? '#ff0000' : '#ffaa00';
+          
+          console.log('Stream status updated from API:', statusData.status);
+          return;
+        }
+      } catch (error) {
+        console.log('API status fetch failed, using simulation:', error);
+      }
+      
+      // Fallback to simulation
+      const status = document.getElementById('streamStatus');
+      const statuses = ['Offline', 'Connecting...', 'Live', 'Buffering...'];
+      const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+      status.textContent = randomStatus;
+      
+      // Update status color based on state
+      status.style.color = randomStatus === 'Live' ? '#00ff00' : 
+                          randomStatus === 'Offline' ? '#ff0000' : '#ffaa00';
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update stats periodically
+      setInterval(updateStats, 5000); // Every 5 seconds
+      setInterval(updateStreamStatus, 10000); // Every 10 seconds
+      
+      // Close mobile nav when clicking on links
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('navMenu').classList.remove('open');
+          document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+        });
+      });
+      
+      // Initial status update
+      updateStreamStatus();
+    });
+
+    // Ticket Modal Functions
+    function showTicketModal(eventType) {
+      const events = {
+        showcase: {
+          title: 'MOV\'EMRADIO Live Showcase',
+          date: 'December 15, 2025',
+          prices: ['General Admission - $25', 'VIP Meet & Greet - $50', 'Backstage Pass - $100']
+        },
+        masterclass: {
+          title: 'Elite Artist Masterclass', 
+          date: 'January 20, 2026',
+          prices: ['Single Session - $15', '4-Session Package - $50', 'Full Year Access - $150']
+        },
+        openmic: {
+          title: 'Open Mic Night',
+          date: 'First Friday Monthly',
+          prices: ['Performer Registration - Free', 'Premium Stream Quality - $5', 'Featured Spotlight - $15']
+        }
+      };
+      
+      const event = events[eventType];
+      const modal = `
+        <div id="ticketModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+          <div style="background: var(--bg-alt); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; max-width: 500px; width: 100%; position: relative;">
+            <button onclick="closeTicketModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">✕</button>
+            <h3 style="color: var(--accent); margin-bottom: 1rem;">${event.title}</h3>
+            <p style="color: var(--text-dim); margin-bottom: 1rem;">📅 ${event.date}</p>
+            <div style="margin: 1.5rem 0;">
+              ${event.prices.map(price => `
+                <label style="display: block; margin: 0.5rem 0; cursor: pointer;">
+                  <input type="radio" name="ticketType" value="${price}" style="margin-right: 0.5rem;">
+                  <span style="color: var(--text);">${price}</span>
+                </label>
+              `).join('')}
+            </div>
+            <div style="margin: 1.5rem 0;">
+              <input type="email" placeholder="Your Email Address" style="width: 100%; padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: var(--text); margin-bottom: 1rem;">
+              <input type="text" placeholder="Full Name" style="width: 100%; padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: var(--text);">
+            </div>
+            <button onclick="purchaseTicket()" class="cta-btn primary" style="width: 100%; margin-top: 1rem;">Complete Purchase</button>
+            <p style="font-size: 0.8rem; color: var(--text-dim); text-align: center; margin-top: 1rem;">Secure payment processing via PayPal & Stripe</p>
+          </div>
+        </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modal);
+    }
+
+    function closeTicketModal() {
+      const modal = document.getElementById('ticketModal');
+      if (modal) modal.remove();
+    }
+
+    function purchaseTicket() {
+      const selectedTicket = document.querySelector('input[name="ticketType"]:checked');
+      if (!selectedTicket) {
+        alert('Please select a ticket type');
+        return;
+      }
+      
+      alert('Redirecting to secure payment... (This would integrate with PayPal/Stripe in production)');
+      closeTicketModal();
+    }
+  </script>
+</body>
+</html>

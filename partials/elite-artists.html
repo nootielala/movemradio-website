@@ -1,0 +1,111 @@
+<section class="page-section artists" aria-labelledby="eliteArtistsHeading">
+  <div class="container">
+    <h1 id="eliteArtistsHeading">Elite Artists</h1>
+
+    <!-- Elite Artist Dropdown Selection -->
+    <div class="artist-selector">
+      <label for="eliteArtistSelect">Select an Elite Artist:</label>
+      <select id="eliteArtistSelect" ng-model="selectedArtist" ng-change="loadArtistContent()" class="artist-dropdown">
+        <option value="">Choose an Artist...</option>
+        <option ng-repeat="artist in eliteArtists" value="{{artist.id}}">{{artist.name}} - {{artist.genre}}</option>
+      </select>
+    </div>
+
+    <!-- Artist Content Display -->
+    <div class="artist-content" ng-if="selectedArtist">
+      <!-- Artist Bio Section -->
+      <div class="artist-bio">
+        <h2>{{currentArtist.name}}</h2>
+        <div class="artist-meta">
+          <span class="genre">{{currentArtist.genre}}</span> • 
+          <span class="location">{{currentArtist.location}}</span>
+        </div>
+        <p class="bio-text">{{currentArtist.bio}}</p>
+      </div>
+
+      <!-- Playlist Section -->
+      <div class="artist-playlist">
+        <h3>Featured Tracks</h3>
+        <div class="playlist-container">
+          <div class="track-item" ng-repeat="track in currentArtist.playlist">
+            <div class="track-info">
+              <span class="track-title">{{track.title}}</span>
+              <span class="track-duration">{{track.duration}}</span>
+            </div>
+            <button class="play-btn" ng-click="playTrack(track)" aria-label="Play {{track.title}}">▶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 24/7 Radio Player -->
+      <div class="radio-player">
+        <h3>{{currentArtist.name}}'s 24/7 Radio</h3>
+        <div class="player-controls">
+          <audio id="radioPlayer" controls ng-src="{{currentArtist.radioStream}}" loop>
+            Your browser does not support the audio element.
+          </audio>
+          <div class="player-info">
+            <div class="now-playing">Now Playing: {{nowPlaying.title || 'Select a track'}}</div>
+            <div class="player-status">{{playerStatus}}</div>
+          </div>
+        </div>
+        
+        <!-- User Upload Section -->
+        <div class="user-uploads">
+          <h4>Add Your Music to the Mix</h4>
+          <div class="upload-area">
+            <input type="file" id="musicUpload" accept="audio/*" multiple ng-file-select="onFileSelect($files)" style="display: none;">
+            <label for="musicUpload" class="upload-btn" ng-class="{uploading: uploading}">
+              <span ng-if="!uploading">Choose Music Files</span>
+              <span ng-if="uploading">Uploading...</span>
+            </label>
+            <div class="upload-info">Upload MP3, WAV, or OGG files to add to {{currentArtist.name}}'s playlist</div>
+          </div>
+          
+          <!-- User Uploaded Tracks Display -->
+          <div class="user-tracks" ng-if="currentArtist.playlist.length > 0">
+            <h5>Current Playlist ({{currentArtist.playlist.length}} tracks)</h5>
+            <div class="user-track-item" ng-repeat="track in currentArtist.playlist | filter:{type:'user'}">
+              <span class="track-name">{{track.title}}</span>
+              <span class="track-meta">{{track.duration}} • Uploaded</span>
+              <button class="remove-btn" ng-click="removeTrack(track)" ng-if="track.type === 'user'">Remove</button>
+            </div>
+            <p ng-if="(currentArtist.playlist | filter:{type:'user'}).length === 0" class="no-uploads">
+              No user uploads yet. Be the first to add your music!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Artist Grid (for browsing all artists) -->
+    <div class="all-artists-section">
+      <h2>All Artists</h2>
+      <div class="filter-group" role="search" aria-label="Artist Filter">
+        <label for="artistFilter" class="visually-hidden">Search Artists</label>
+        <input id="artistFilter" type="text" ng-model="filter" placeholder="Search artists by name, genre, location" />
+      </div>
+
+      <div class="artist-grid">
+        <div class="artist-card" ng-repeat="artist in artists | filter:filter track by artist.name" ng-class="{featured: artist.featured}" tabindex="0" aria-label="Artist {{artist.name}}">
+          <h3>{{artist.name}}</h3>
+          <p class="meta">
+            <span class="genre">{{artist.genre}}</span> • <span class="location">{{artist.location}}</span>
+          </p>
+          <p class="badge" ng-if="artist.featured" aria-label="Featured Artist">Featured</p>
+        </div>
+        <p class="empty" ng-if="(artists | filter:filter).length === 0">No artists match your search yet.</p>
+      </div>
+    </div>
+
+    <!-- Navigation Section -->
+    <div class="page-navigation">
+      <h2>Explore More</h2>
+      <div class="nav-links">
+        <a href="#/" class="nav-link">← Back to Home</a>
+        <a href="#/radio" class="nav-link">Listen to Live Radio →</a>
+        <a href="#/about" class="nav-link">Learn About Us</a>
+      </div>
+    </div>
+  </div>
+</section>

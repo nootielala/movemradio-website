@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOV'EMRADIOTV - Watch Live Music Videos, Artist Interviews & Exclusive Content" />
+  <title>MOV'EMRADIOTV | MOV'EMRADIO</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="MOV'EM RADIO Home">
+      <a href="home.html">MOV'EM<span style="color: #ff0000;">RADIO</span></a>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <ul id="navMenu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="elite-artists.html">Elite Artists</a></li>
+        <li><a href="radio.html">Radio</a></li>
+        <li><a href="movemradiotv.html" class="active">MOV'EMRADIOTV</a></li>
+        <li><a href="elite-artist-program.html">Program</a></li>
+        <li><a href="music-submission.html">Submit Music</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="content">
+    <!-- TV Hero Section -->
+    <section class="hero" style="background: radial-gradient(circle at 30% 30%, #1f1f24, #0b0b0d 60%); padding: 4rem 1rem 3rem;">
+      <div class="hero-inner">
+        <!-- MOV'EMRADIOTV Logo -->
+        <div style="margin-bottom: 2rem;">
+          <img src="img/movem-radio-logo.png" alt="MOV'EMRADIO" style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 8px 32px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));" />
+        </div>
+        <h1 id="tvHeading" style="font-size: clamp(2.5rem, 6vw, 4rem); margin: 0 0 1rem; letter-spacing: 1px;">MOV'EMRADIO<span style="color: #ff0000;">TV</span></h1>
+        <p class="tagline">Music Videos • Artist Interviews • Live Sessions • Exclusive Content</p>
+      </div>
+    </section>
+
+    <section class="page-section tv-content" aria-labelledby="tvHeading">
+      <div class="container">
+        
+        <!-- Video Player Section -->
+        <div class="video-player-section" style="margin-bottom: 4rem;">
+          <h2>🎬 Live Stream</h2>
+          <div class="video-placeholder" style="background: #1b1b1f; border: 2px solid var(--accent); border-radius: 12px; padding: 3rem 2rem; text-align: center; margin: 2rem 0;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">📺</div>
+            <h3>MOV'EMRADIOTV Coming Soon!</h3>
+            <p style="color: var(--text-dim); margin: 1rem 0 2rem;">We're building something amazing for you. Live music videos, artist interviews, and exclusive behind-the-scenes content.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <button onclick="showNotificationModal()" class="cta-btn primary">🔔 Get Notified</button>
+              <a href="elite-artists.html" class="cta-btn secondary">Meet Our Artists</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Preview Grid -->
+        <div class="content-preview" style="margin-bottom: 4rem;">
+          <h2 style="text-align: center; margin-bottom: 3rem;">🎥 What to Expect</h2>
+          
+          <div class="content-grid" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            
+            <!-- Music Videos -->
+            <div class="content-card" style="background: rgba(255, 255, 255, 0.02); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🎵</div>
+              <h3 style="color: var(--accent); margin: 1rem 0;">Music Videos</h3>
+              <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Official music videos from our elite artists plus exclusive visual content you won't find anywhere else.</p>
+              <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem;">
+                <li>✓ HD Quality Streaming</li>
+                <li>✓ Exclusive Premieres</li>
+                <li>✓ Artist Commentary</li>
+              </ul>
+            </div>
+
+            <!-- Live Sessions -->
+            <div class="content-card" style="background: rgba(255, 255, 255, 0.02); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🎤</div>
+              <h3 style="color: var(--accent); margin: 1rem 0;">Live Sessions</h3>
+              <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Watch our artists perform live in intimate studio settings with behind-the-scenes footage.</p>
+              <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem;">
+                <li>✓ Acoustic Performances</li>
+                <li>✓ Studio Sessions</li>
+                <li>✓ Live Q&A</li>
+              </ul>
+            </div>
+
+            <!-- Interviews & Docs -->
+            <div class="content-card" style="background: rgba(255, 255, 255, 0.02); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🎬</div>
+              <h3 style="color: var(--accent); margin: 1rem 0;">Interviews & Docs</h3>
+              <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Deep dives into artist stories, creative processes, and the independent music journey.</p>
+              <ul style="list-style: none; padding: 0; color: var(--text-dim); font-size: 0.9rem;">
+                <li>✓ Artist Interviews</li>
+                <li>✓ Documentary Content</li>
+                <li>✓ Music Industry Insights</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Featured Artists Spotlight -->
+        <div class="artist-spotlight" style="background: var(--bg-alt); padding: 3rem 2rem; border-radius: 12px; margin-bottom: 4rem;">
+          <h2 style="text-align: center; margin-bottom: 2rem;">🌟 Artist Spotlight</h2>
+          <p style="text-align: center; color: var(--text-dim); margin-bottom: 3rem;">Get ready to see our elite artists like never before on MOV'EMRADIOTV</p>
+          
+          <div class="spotlight-grid" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="spotlight-item" style="text-align: center; padding: 1rem;">
+              <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎤</div>
+              <h4 style="color: var(--accent);">Mouthpiece</h4>
+              <p style="color: var(--text-dim); font-size: 0.9rem;">Exclusive video content coming soon</p>
+            </div>
+            <div class="spotlight-item" style="text-align: center; padding: 1rem;">
+              <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎵</div>
+              <h4 style="color: var(--accent);">Serenity Joi</h4>
+              <p style="color: var(--text-dim); font-size: 0.9rem;">Behind-the-scenes studio footage</p>
+            </div>
+            <div class="spotlight-item" style="text-align: center; padding: 1rem;">
+              <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎶</div>
+              <h4 style="color: var(--accent);">Lil Xeen</h4>
+              <p style="color: var(--text-dim); font-size: 0.9rem;">Live performance recordings</p>
+            </div>
+            <div class="spotlight-item" style="text-align: center; padding: 1rem;">
+              <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🎸</div>
+              <h4 style="color: var(--accent);">+ More Artists</h4>
+              <p style="color: var(--text-dim); font-size: 0.9rem;">Discover all 6 elite artists</p>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="elite-artists.html" class="cta-btn primary">Meet All Elite Artists</a>
+          </div>
+        </div>
+
+        <!-- Launch Timeline -->
+        <div class="launch-timeline" style="text-align: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+          <h2 style="margin-bottom: 2rem;">📅 Launch Timeline</h2>
+          <div style="max-width: 600px; margin: 0 auto;">
+            <div style="background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 25px; margin-bottom: 2rem; font-weight: bold;">
+              Coming Early 2026
+            </div>
+            <p style="color: var(--text-dim); margin-bottom: 2rem;">We're working hard to bring you the best in independent music television. Be among the first to know when we launch!</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <button onclick="showNotificationModal()" class="cta-btn primary">🔔 Get Launch Updates</button>
+              <a href="about.html" class="cta-btn secondary">Learn About Our Mission</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 MOV'EMRADIO. All rights reserved.</p>
+  </footer>
+
+  <!-- Notification Modal -->
+  <div id="notificationModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; padding: 1rem;">
+    <div style="background: var(--bg-alt); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; max-width: 500px; width: 100%; position: relative;">
+      <button onclick="closeNotificationModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">✕</button>
+      <h3 style="color: var(--accent); margin-bottom: 1rem;">🔔 Get Notified</h3>
+      <p style="color: var(--text-dim); margin-bottom: 2rem;">Be the first to know when MOV'EMRADIOTV launches!</p>
+      
+      <form id="notificationForm" style="display: grid; gap: 1rem;">
+        <input type="email" placeholder="Your Email Address" required style="padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: var(--text);">
+        <button type="submit" class="cta-btn primary" style="width: 100%;">Subscribe for Updates</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Navigation toggle
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const navToggle = document.querySelector('.nav-toggle');
+      
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    // Notification Modal
+    function showNotificationModal() {
+      document.getElementById('notificationModal').style.display = 'flex';
+    }
+
+    function closeNotificationModal() {
+      document.getElementById('notificationModal').style.display = 'none';
+    }
+
+    // Handle notification form
+    document.getElementById('notificationForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      
+      // Here you would typically send to your email service
+      alert(`Thanks for subscribing! We'll notify ${email} when MOV'EMRADIOTV launches.`);
+      closeNotificationModal();
+      this.reset();
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('notificationModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeNotificationModal();
+      }
+    });
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Close mobile nav when clicking on links
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('navMenu').classList.remove('open');
+          document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

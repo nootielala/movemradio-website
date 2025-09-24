@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="🎤 Elite Artist Program - Mentorship. Performance. Strategy. Legacy. Powered by Mov'em Radio" />
+  <title>🎤 Elite Artist Program | MOV'EM RADIO</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <style>
+    /* Enhanced Red & Black Theme for Elite Artist Program */
+    body {
+      background: linear-gradient(135deg, #000000 0%, #1a0000 30%, #330000 50%, #1a0000 70%, #000000 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.1), transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .hero-program {
+      background: linear-gradient(135deg, #000000 0%, #1a0000 30%, #330000 50%, #1a0000 70%, #000000 100%);
+      position: relative;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    .hero-program::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(255, 0, 0, 0.3), transparent 70%);
+      mix-blend-mode: screen;
+    }
+    
+    .hero-program::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(255, 0, 0, 0.2), transparent 60%);
+      mix-blend-mode: multiply;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-program h1 {
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+    
+    .hero-subtitle {
+      color: #ff0000;
+      text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
+      font-weight: bold;
+    }
+    
+    .hero-tagline {
+      color: #cccccc;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+    
+    .pricing-card {
+      background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.05));
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 500px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3), inset 0 0 30px rgba(255, 0, 0, 0.1);
+    }
+    
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(255, 0, 0, 0.1), transparent 50%);
+      pointer-events: none;
+    }
+    
+    .pricing-card .price {
+      color: #ff0000;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 4px 20px rgba(255, 0, 0, 0.6);
+    }
+    
+    .page-section {
+      background: transparent;
+      position: relative;
+    }
+    
+    .page-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(255, 0, 0, 0.05), transparent 70%);
+      pointer-events: none;
+    }
+    
+    .page-section h2 {
+      color: #ff0000;
+      text-shadow: 0 2px 15px rgba(255, 0, 0, 0.6);
+      text-align: center;
+    }
+    
+    .benefit-item {
+      background: rgba(255, 0, 0, 0.05);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      background: rgba(255, 0, 0, 0.1);
+      border-color: #ff0000;
+      box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+      transform: translateY(-3px);
+    }
+    
+    .benefit-icon {
+      color: #ff0000;
+      font-size: 2rem;
+      text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
+    }
+    
+    .cta-btn {
+      background: linear-gradient(90deg, #ff0000, #cc0000);
+      border: 2px solid #ff0000;
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+    
+    .cta-btn:hover {
+      background: linear-gradient(90deg, #cc0000, #990000);
+      box-shadow: 0 6px 30px rgba(255, 0, 0, 0.6);
+      transform: translateY(-3px) scale(1.02);
+    }
+    
+    .cta-btn.secondary {
+      background: transparent;
+      color: #ff0000;
+      border: 2px solid #ff0000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 0, 0, 0.1);
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    
+    .cta-btn.secondary:hover {
+      background: #ff0000;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+    
+    .intake-form {
+      background: rgba(255, 0, 0, 0.05);
+      border: 2px solid rgba(255, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2);
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+      background: #000000;
+      border: 2px solid rgba(255, 0, 0, 0.3);
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: #ff0000;
+      box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+      outline: none;
+    }
+    
+    .elite-logo img {
+      filter: drop-shadow(0 8px 32px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.4));
+    }
+    
+    .pricing-card::before {
+      content: '⭐ ELITE ⭐';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 2rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .price {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--accent);
+      margin: 1rem 0;
+    }
+    
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .month-card {
+      background: var(--bg-alt);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .month-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    
+    .month-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    
+    .testimonial-card {
+      background: var(--bg-alt);
+      border-left: 4px solid var(--accent);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--accent);
+      position: absolute;
+      top: -10px;
+      left: 1rem;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      background: rgba(255, 54, 94, 0.1);
+    }
+    
+    .benefit-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      min-width: 2rem;
+    }
+    
+    .cta-section-final {
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    
+    .cta-btn-primary {
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    
+    .cta-btn-primary:hover {
+      transform: scale(1.05);
+    }
+    
+    .cta-btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-btn-secondary:hover {
+      background: white;
+      color: var(--accent);
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-program h1 {
+        font-size: 2.5rem;
+      }
+      
+      .pricing-card {
+        margin: 1rem;
+        padding: 2rem 1rem;
+      }
+      
+      .intake-form {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="MOV'EM RADIO Home">
+      <a href="home.html">MOV'EM<span style="color: #ff0000;">RADIO</span></a>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <ul id="navMenu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="elite-artists.html">Elite Artists</a></li>
+        <li><a href="radio.html">Radio</a></li>
+        <li><a href="movemradiotv.html">MOV'EMRADIOTV</a></li>
+        <li><a href="elite-artist-program.html" class="active">Program</a></li>
+        <li><a href="music-submission.html">Submit Music</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="content">
+    <!-- Hero Section -->
+    <section class="hero-program" aria-labelledby="programHero">
+      <div class="hero-content">
+        <!-- Elite Artist Logo -->
+        <div class="elite-logo" style="margin-bottom: 2rem;">
+          <img src="img/elite-artist-logo.png" alt="MOV'EM RADIO ELITE ARTIST" style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 8px 32px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));" />
+        </div>
+        
+        <h1 id="programHero"> Elite Artist Program</h1>
+        <p class="hero-subtitle">Powered by Mov'em Radio</p>
+        <p class="hero-tagline">Mentorship. Performance. Strategy. Legacy.</p>
+        
+        <div style="margin: 3rem 0;">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Move Your Career Forward?</h2>
+          <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 600px; margin: 0 auto;">
+            Join a curated mentorship and showcase experience built for independent artists who are serious about growth.
+          </p>
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="#intake-form" class="cta-btn primary">🔘 Apply Now</a>
+          <a href="#mission" class="cta-btn secondary">🔘 Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section id="mission" class="page-section" aria-labelledby="missionHeading" style="background: rgba(255, 0, 0, 0.05); border-top: 1px solid rgba(255, 0, 0, 0.2); border-bottom: 1px solid rgba(255, 0, 0, 0.2);">
+      <div class="container">
+        <h2 id="missionHeading" style="color: #ff0000; text-shadow: 0 4px 20px rgba(255, 0, 0, 0.6); text-align: center; font-size: 2.5rem;">Our Mission</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent); margin-bottom: 2rem;">
+            We are an INDEPENDENT Radio Station Dedicated to Playing and Supporting INDEPENDENT Artists AND THEIR MUSIC.
+          </p>
+          
+          <div style="background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Created in Las Vegas, Nevada to display the Determination, Drive and Hunger of INDEPENDENT Artists 
+              that is no longer found in main-stream music. Our goal is to give these highly talented artists a 
+              broader marketing venue and make INDEPENDENT music <strong style="color: #FFD700;">The New Main-Stream</strong>.
+            </p>
+            
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem; margin-top: 1.5rem;">
+              <h3 style="color: #FFD700; font-size: 1.5rem; margin-bottom: 0.5rem;">@ MOV'EM RADIO</h3>
+              <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent); font-style: italic; margin: 1rem 0;">
+                "YOU SEND'EM WE MOV'EM"
+              </p>
+              <p style="font-size: 1.2rem; color: #FFD700; font-weight: bold;">
+                LET'S GO!!!
+              </p>
+            </div>
+          </div>
+          
+          <div style="margin-top: 3rem;">
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+              The Elite Artist Program embodies this mission by providing comprehensive mentorship, performance opportunities, 
+              and professional development for independent artists ready to take their careers to the next level.
+            </p>
+            
+            <a href="#intake-form" class="cta-btn primary" style="margin-right: 1rem;">🔘 Join Our Mission - Apply Now</a>
+            <a href="#overview" class="cta-btn secondary">🔘 See Program Benefits</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Overview - Moved to top -->
+    <section id="overview" class="page-section" aria-labelledby="overviewHeading">
+      <div class="container">
+        <h2 id="overviewHeading">💡 What You Get Inside the Program</h2>
+        
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎓</div>
+            <div>
+              <h3>Monthly Mentorship Sessions</h3>
+              <p>One-on-one and group sessions with industry professionals who know what it takes to succeed.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">🎤</div>
+            <div>
+              <h3>Weekly Performance Showcases</h3>
+              <p>Virtual and live performance opportunities to build your stage presence and connect with audiences.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">🌟</div>
+            <div>
+              <h3>Major Showcases (June & December)</h3>
+              <p>Two high-production showcases per year featuring press coverage, livestreams, and merchandise opportunities.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">🧰</div>
+            <div>
+              <h3>Monthly Branded Resource Drops</h3>
+              <p>Exclusive templates, guides, and strategy tools to help you build your brand and grow your audience.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">💬</div>
+            <div>
+              <h3>Personalized Onboarding</h3>
+              <p>Custom onboarding experience with branded communications tailored to your artistic goals.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <div>
+              <h3>Artist & Mentor Community</h3>
+              <p>Access to a network of serious artists and industry mentors committed to mutual growth and success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="page-section" aria-labelledby="pricingHeading">
+      <div class="container">
+        <h2 id="pricingHeading">💸 Your Investment</h2>
+        
+        <div class="pricing-card">
+          <h3>Elite Artist Program</h3>
+          <div class="price">$500</div>
+          <p><strong>One-time startup fee</strong></p>
+          
+          <div style="text-align: left; margin: 2rem 0;">
+            <p><strong>This locks in your spot and includes:</strong></p>
+            <ul style="list-style: none; padding: 0;">
+              <li>✓ Access to your first mentorship class</li>
+              <li>✓ Complete onboarding materials</li>
+              <li>✓ Your first showcase slot guaranteed</li>
+              <li>✓ Welcome resource package</li>
+            </ul>
+          </div>
+          
+          <!-- Minimum Down Payment -->
+          <div style="background: rgba(255, 0, 0, 0.15); border: 2px solid #ff0000; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; text-align: center; box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);">
+            <h4 style="color: #ff0000; margin-bottom: 1rem; font-size: 1.2rem; text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);">💰 Minimum Down Payment Required</h4>
+            <div style="font-size: 1.5rem; font-weight: bold; color: #FFD700; margin-bottom: 0.5rem; text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);">$150</div>
+            <p style="font-size: 0.95rem; color: var(--text-dim);">
+              Secures your enrollment and guarantees your spot in the program
+            </p>
+          </div>
+          
+          <!-- Payment Options Dropdown -->
+          <div style="margin: 2rem 0;">
+            <label for="paymentOptions" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #ff0000; text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);">
+              Choose Your Payment Schedule:
+            </label>
+            <select id="paymentOptions" style="width: 100%; padding: 0.75rem; font-size: 1rem; border: 2px solid #ff0000; border-radius: 8px; background: #000000; color: #ffffff; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);">
+              <option value="weekly">Weekly Payments - $150 down + $87.50 x 4 weeks</option>
+              <option value="biweekly">Bi-Weekly Payments - $150 down + $175 x 2 payments</option>
+              <option value="monthly" selected>Monthly Payment - $500 (Full Amount)</option>
+            </select>
+            <p style="color: var(--text-dim); font-size: 0.9rem;">
+              Flexible monthly or quarterly payment options available after enrollment.
+            </p>
+          </div>
+          
+          <a href="#intake-form" class="cta-btn primary" style="width: 100%; display: block; text-align: center;">
+            🔘 Secure Your Spot
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Breakdown -->
+    <section id="curriculum" class="page-section" aria-labelledby="curriculumHeading">
+      <div class="container">
+        <h2 id="curriculumHeading">📅 12-Month Mentorship Cycle</h2>
+        
+        <div class="program-grid">
+          <div class="month-card">
+            <div class="month-number">01</div>
+            <h3>Identity & Onboarding</h3>
+            <p>Define your artistic identity and get familiar with program resources.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">02</div>
+            <h3>Creative Direction</h3>
+            <p>Develop your unique sound and visual aesthetic with mentor guidance.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">03</div>
+            <h3>Content Strategy</h3>
+            <p>Learn to create and distribute content that connects with your audience.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">04</div>
+            <h3>Performance Skills</h3>
+            <p>Build stage presence and confidence through weekly showcase participation.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">05</div>
+            <h3>Brand Development</h3>
+            <p>Create a cohesive brand that represents your artistic vision and values.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">06</div>
+            <h3>Major Showcase Prep</h3>
+            <p>Prepare for the June major showcase with professional production support.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">07</div>
+            <h3>Industry Networking</h3>
+            <p>Connect with industry professionals and learn collaboration strategies.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">08</div>
+            <h3>Marketing & Promotion</h3>
+            <p>Master digital marketing tools and promotional strategies for artists.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">09</div>
+            <h3>Revenue Streams</h3>
+            <p>Explore multiple income sources including streaming, merch, and live shows.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">10</div>
+            <h3>Advanced Performance</h3>
+            <p>Refine your live performance skills and develop your signature show.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">11</div>
+            <h3>Legacy Building</h3>
+            <p>Create sustainable systems for long-term career growth and impact.</p>
+          </div>
+          
+          <div class="month-card">
+            <div class="month-number">12</div>
+            <h3>Final Showcase Prep</h3>
+            <p>Prepare for the December major showcase and plan your next chapter.</p>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0;">
+          <a href="#intake-form" class="cta-btn primary">🔘 Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase System -->
+    <section id="showcases" class="page-section" aria-labelledby="showcasesHeading">
+      <div class="container">
+        <h2 id="showcasesHeading">🎤 Weekly & Biannual Showcases</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin: 3rem 0;">
+          <div>
+            <h3>Weekly Showcases</h3>
+            <p>
+              Artists perform weekly in curated showcases designed to build confidence, stage presence, and fan engagement. 
+              These intimate sessions allow you to test new material, receive feedback, and connect with fellow artists.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+              <li>🎯 Performance skills development</li>
+              <li>📱 Professional recording and streaming</li>
+              <li>🎪 Audience engagement practice</li>
+              <li>📊 Performance analytics and feedback</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3>Major Showcases</h3>
+            <p>
+              Twice a year, we go big—with high-production showcases featuring press coverage, professional livestreams, 
+              merchandise opportunities, and industry networking events.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+              <li>📺 Professional livestream production</li>
+              <li>📰 Press coverage and media outreach</li>
+              <li>🛍️ Merchandise drops and sales</li>
+              <li>🤝 Industry networking opportunities</li>
+              <li>🏆 Awards and recognition ceremony</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: var(--bg-alt); padding: 2rem; border-radius: 8px; text-align: center;">
+          <h4>Showcase Highlight Reel Coming Soon</h4>
+          <p>Previous showcase performances, artist testimonials, and behind-the-scenes content.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artist Intake Form - Moved to bottom of page -->
+    <section id="intake-form" class="page-section" aria-labelledby="intakeFormHeading">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h2 id="intakeFormHeading">Elite Artist Development Program</h2>
+          <h3 style="color: var(--accent); margin: 1rem 0;">Artist Intake Form</h3>
+          <p style="color: var(--text-dim);">Presented by Knynethagreat • Designed by Mov'em</p>
+        </div>
+
+        <form id="artistIntakeForm" class="intake-form" style="max-width: 800px; margin: 0 auto;">
+          <!-- Section 1: Artist Profile -->
+          <div class="form-section">
+            <h3 style="background: #ffd700; color: #000; padding: 0.5rem 1rem; border-radius: 4px; display: inline-block;">🟨 Section 1: Artist Profile</h3>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="stageName">Stage Name (if different):</label>
+                <input type="text" id="stageName" name="stageName">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="referredBy">Referred By:</label>
+                <input type="text" id="referredBy" name="referredBy" placeholder="Who sent you to us?">
+              </div>
+              
+              <div class="form-group">
+                <label for="pronouns">Pronouns:</label>
+                <input type="text" id="pronouns" name="pronouns" placeholder="e.g., she/her, he/him, they/them">
+              </div>
+            </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              
+              <div class="form-group">
+                <label for="location">Location (City, State):</label>
+                <input type="text" id="location" name="location">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Preferred Communication Method:</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="commMethod" value="email"> Email</label>
+                <label><input type="checkbox" name="commMethod" value="text"> Text</label>
+                <label><input type="checkbox" name="commMethod" value="call"> Call</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="primaryDisciplines">Primary Discipline(s):</label>
+              <textarea id="primaryDisciplines" name="primaryDisciplines" rows="3" placeholder="Describe your main artistic disciplines..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Artist Type:</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="artistType" value="vocalist"> Vocalist</label>
+                <label><input type="checkbox" name="artistType" value="producer"> Producer</label>
+                <label><input type="checkbox" name="artistType" value="instrumentalist"> Instrumentalist</label>
+                <label><input type="checkbox" name="artistType" value="visual"> Visual Artist</label>
+                <label><input type="checkbox" name="artistType" value="writer"> Writer</label>
+                <label><input type="checkbox" name="artistType" value="other"> Other: <input type="text" name="artistTypeOther" style="width: auto; margin-left: 0.5rem;"></label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="genres">Genres or Styles You Work In:</label>
+              <textarea id="genres" name="genres" rows="2" placeholder="List your musical genres and styles..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="artisticIdentity">Describe your artistic identity in one sentence:</label>
+              <input type="text" id="artisticIdentity" name="artisticIdentity" placeholder="What defines you as an artist?">
+            </div>
+            
+            <div class="form-group">
+              <label for="themes">What themes or emotions drive your work?</label>
+              <textarea id="themes" name="themes" rows="3" placeholder="Describe the deeper meaning behind your art..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="influences">Who or what influences your sound and style?</label>
+              <textarea id="influences" name="influences" rows="3" placeholder="Artists, experiences, cultures, etc. that inspire you..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="portfolio">Link to Website or Portfolio:</label>
+              <input type="url" id="portfolio" name="portfolio" placeholder="https://your-website.com">
+            </div>
+            
+            <div class="form-group">
+              <label>Social Media Handles:</label>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="instagram">Instagram:</label>
+                  <input type="text" id="instagram" name="instagram" placeholder="@yourusername">
+                </div>
+                <div class="form-group">
+                  <label for="threads">Threads:</label>
+                  <input type="text" id="threads" name="threads" placeholder="@yourusername">
+                </div>
+                <div class="form-group">
+                  <label for="otherSocial">Other:</label>
+                  <input type="text" id="otherSocial" name="otherSocial" placeholder="Platform: @username">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="recentProjects">Recent Projects or Releases (last 12 months):</label>
+              <textarea id="recentProjects" name="recentProjects" rows="3" placeholder="List your recent work, releases, performances, etc."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="proudWork">What are you most proud of creatively?</label>
+              <textarea id="proudWork" name="proudWork" rows="3" placeholder="Describe your proudest creative achievement..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>What do you hope to gain from this program?</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="programGoals" value="refine-sound"> Refine my sound</label>
+                <label><input type="checkbox" name="programGoals" value="clarify-brand"> Clarify my brand</label>
+                <label><input type="checkbox" name="programGoals" value="strategic-roadmap"> Build a strategic roadmap</label>
+                <label><input type="checkbox" name="programGoals" value="release-prep"> Prepare for a release or tour</label>
+                <label><input type="checkbox" name="programGoals" value="collaborate"> Collaborate with other artists</label>
+                <label><input type="checkbox" name="programGoals" value="other"> Other: <input type="text" name="programGoalsOther" style="width: auto; margin-left: 0.5rem;"></label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="challenge">What's one challenge you're currently facing in your creative career?</label>
+              <textarea id="challenge" name="challenge" rows="3" placeholder="Describe your biggest current challenge..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="successVision">What does success look like for you after this program?</label>
+              <textarea id="successVision" name="successVision" rows="3" placeholder="Describe your vision of success..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Preferred Capstone Format:</label>
+              <div class="checkbox-group">
+                <label><input type="radio" name="capstoneFormat" value="live-performance"> Live Performance</label>
+                <label><input type="radio" name="capstoneFormat" value="brand-rollout"> Brand Rollout</label>
+                <label><input type="radio" name="capstoneFormat" value="cultural-project"> Cultural Project</label>
+                <label><input type="radio" name="capstoneFormat" value="multimedia"> Multimedia Installation</label>
+                <label><input type="radio" name="capstoneFormat" value="other"> Other: <input type="text" name="capstoneFormatOther" style="width: auto; margin-left: 0.5rem;"></label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Do you have collaborators you'd like to involve?</label>
+              <div class="checkbox-group">
+                <label><input type="radio" name="hasCollaborators" value="yes"> Yes</label>
+                <label><input type="radio" name="hasCollaborators" value="no"> No</label>
+              </div>
+              <div class="form-group" style="margin-top: 1rem;">
+                <label for="collaboratorDetails">If yes, list names or roles:</label>
+                <input type="text" id="collaboratorDetails" name="collaboratorDetails" placeholder="Names, roles, or types of collaborators">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="accommodations">Do you have any access needs or accommodations we should be aware of?</label>
+              <textarea id="accommodations" name="accommodations" rows="2" placeholder="Please describe any accommodations needed..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Are you open to mentorship or peer critique?</label>
+              <div class="checkbox-group">
+                <label><input type="radio" name="openToMentorship" value="yes"> Yes</label>
+                <label><input type="radio" name="openToMentorship" value="no"> No</label>
+                <label><input type="radio" name="openToMentorship" value="unsure"> Unsure</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="additionalInfo">Anything else you'd like us to know?</label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Share anything else that would help us understand your artistic journey and goals..."></textarea>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+              <button type="submit" class="cta-btn primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                🎤 Submit Application
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="apply" class="cta-section-final">
+      <div class="container">
+        <h2>📲 Ready to Move?</h2>
+        <p style="font-size: 1.3rem; margin: 2rem 0;">
+          Spots are limited. We're curating artists who are ready to grow, perform, and build legacy.
+        </p>
+        <p style="font-size: 1.1rem; margin-bottom: 3rem;">
+          If that's you—let's go.
+        </p>
+        
+        <div class="cta-buttons">
+          <a href="mailto:elite@movemradio.com?subject=Elite Artist Program Application" class="cta-btn-primary">🔘 Apply Now</a>
+          <a href="tel:+1-555-MOVEM-01" class="cta-btn-secondary">🔘 Book a Call</a>
+          <a href="#" onclick="downloadProgramGuide()" class="cta-btn-secondary">🔘 Download Program Guide</a>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <span>📧</span>
+            <a href="mailto:elite@movemradio.com" style="color: white;">elite@movemradio.com</a>
+          </div>
+          <div class="contact-item">
+            <span>📞</span>
+            <a href="tel:+1-555-MOVEM-01" style="color: white;">+1 (555) MOVEM-01</a>
+          </div>
+          <div class="contact-item">
+            <span>🔗</span>
+            <a href="https://instagram.com/movemradio" style="color: white;" target="_blank">@movemradio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elite Program Events Section -->
+    <section class="program-events" style="background: var(--bg-alt); padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: var(--accent);">🎭 Exclusive Program Events</h2>
+        
+        <div class="events-grid" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          
+          <!-- Monthly Showcase -->
+          <div class="event-card" style="background: rgba(255, 0, 0, 0.05); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center; position: relative; overflow: hidden;">
+            <div class="event-badge" style="background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: bold;">Monthly</div>
+            <h3 style="color: var(--accent); margin: 1rem 0;">Elite Artist Showcase</h3>
+            <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Exclusive performance opportunities for program members. Build your stage presence and grow your fanbase!</p>
+            <div class="event-details" style="margin: 1rem 0; font-size: 0.9rem;">
+              <p>📍 Live Stream + Partner Venues</p>
+              <p>⏰ Last Saturday, 8:00 PM EST</p>
+              <p style="color: var(--accent); font-weight: bold;">🎫 Members Only</p>
+            </div>
+            <a href="#intake-form" class="cta-btn primary" style="margin-top: 1rem;">Join Program</a>
+          </div>
+
+          <!-- Mentorship Sessions -->
+          <div class="event-card" style="background: rgba(255, 0, 0, 0.05); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center; position: relative; overflow: hidden;">
+            <div class="event-badge" style="background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: bold;">Weekly</div>
+            <h3 style="color: var(--accent); margin: 1rem 0;">1-on-1 Mentorship</h3>
+            <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Personal coaching sessions with industry professionals. Tailored feedback and career strategy development.</p>
+            <div class="event-details" style="margin: 1rem 0; font-size: 0.9rem;">
+              <p>📍 Virtual Sessions</p>
+              <p>⏰ Flexible Scheduling</p>
+              <p style="color: var(--accent); font-weight: bold;">🎫 Program Included</p>
+            </div>
+            <a href="#pricing" class="cta-btn secondary" style="margin-top: 1rem;">View Pricing</a>
+          </div>
+
+          <!-- Major Showcase -->
+          <div class="event-card" style="background: rgba(255, 0, 0, 0.05); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center; position: relative; overflow: hidden;">
+            <div class="event-badge" style="background: linear-gradient(90deg, #ff0000, #cc0000); color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: bold;">June 2026</div>
+            <h3 style="color: var(--accent); margin: 1rem 0;">Major Elite Showcase</h3>
+            <p style="color: var(--text-dim); margin-bottom: 1.5rem;">The ultimate platform for elite program graduates. Professional venue, industry connections, and career opportunities.</p>
+            <div class="event-details" style="margin: 1rem 0; font-size: 0.9rem;">
+              <p>📍 Premium Venue + Live Stream</p>
+              <p>⏰ Full Weekend Event</p>
+              <p style="color: var(--accent); font-weight: bold;">🎫 Graduation Requirement</p>
+            </div>
+            <a href="#curriculum" class="cta-btn primary" style="margin-top: 1rem;">Learn More</a>
+          </div>
+
+        </div>
+        
+        <!-- Ticket Info -->
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+          <h3 style="color: var(--accent); margin-bottom: 1rem;">🎟️ Event Access</h3>
+          <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Elite Program members get exclusive access to all events, showcases, and masterclasses. Public tickets available for major showcases.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#intake-form" class="cta-btn primary">Join Elite Program</a>
+            <a href="../radio.html" class="cta-btn secondary">View Public Events</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>MoveM Radio</h3>
+        <p>Elite Artist Program</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="elite-artists.html">Elite Artists</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Program</h4>
+        <ul>
+          <li><a href="#overview">Program Overview</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
+          <li><a href="#intake-form">Apply Now</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 MoveM Radio Elite Artist Program. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation toggle
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const navToggle = document.querySelector('.nav-toggle');
+      
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    // Download program guide
+    function downloadProgramGuide() {
+      // In a real implementation, this would download a PDF
+      alert('Program guide download would be implemented here. For now, please contact us directly for more information!');
+    }
+
+    // Handle artist intake form submission
+    async function handleIntakeFormSubmission(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const formData = new FormData(form);
+      
+      // Show loading state
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting Application...';
+      submitBtn.disabled = true;
+      
+      // Collect form data
+      const applicationData = {
+        personalInfo: {
+          fullName: formData.get('fullName'),
+          stageName: formData.get('stageName'),
+          referredBy: formData.get('referredBy'),
+          pronouns: formData.get('pronouns'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          location: formData.get('location'),
+          commMethod: formData.getAll('commMethod')
+        },
+        artistProfile: {
+          primaryDisciplines: formData.get('primaryDisciplines'),
+          artistType: formData.getAll('artistType'),
+          artistTypeOther: formData.get('artistTypeOther'),
+          genres: formData.get('genres'),
+          artisticIdentity: formData.get('artisticIdentity'),
+          themes: formData.get('themes'),
+          influences: formData.get('influences')
+        },
+        portfolio: {
+          website: formData.get('portfolio'),
+          instagram: formData.get('instagram'),
+          threads: formData.get('threads'),
+          otherSocial: formData.get('otherSocial'),
+          recentProjects: formData.get('recentProjects'),
+          proudWork: formData.get('proudWork')
+        },
+        programInfo: {
+          goals: formData.getAll('programGoals'),
+          goalsOther: formData.get('programGoalsOther'),
+          challenge: formData.get('challenge'),
+          successVision: formData.get('successVision'),
+          capstoneFormat: formData.get('capstoneFormat'),
+          capstoneFormatOther: formData.get('capstoneFormatOther'),
+          hasCollaborators: formData.get('hasCollaborators'),
+          collaboratorDetails: formData.get('collaboratorDetails'),
+          accommodations: formData.get('accommodations'),
+          openToMentorship: formData.get('openToMentorship'),
+          additionalInfo: formData.get('additionalInfo')
+        }
+      };
+      
+      try {
+        // Static hosting fallback - direct form submission
+        // In production, this would be handled by a backend service or form handler
+        console.log('Application Data Collected:', applicationData);
+        
+        // Simulate successful submission
+        alert('🎉 Application received! We will review your submission and contact you within 3-5 business days.\n\nNext Steps:\n1. Check your email for confirmation\n2. We\'ll schedule an interview call\n3. Payment and enrollment details will follow\n\nThank you for applying to the Elite Artist Program!');
+        form.reset();
+        
+        // Optional: Could integrate with email service like EmailJS or Netlify Forms
+        // For now, we'll log the data for demonstration
+      } catch (error) {
+        console.log('Submission error:', error);
+        alert('⚠️ There was an issue submitting your application. Please try again or contact us directly at elite@movemradio.com');
+      }
+      
+      // Reset submit button
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Close mobile nav when clicking on links
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('open');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set up intake form submission
+      const intakeForm = document.getElementById('artistIntakeForm');
+      if (intakeForm) {
+        intakeForm.addEventListener('submit', handleIntakeFormSubmission);
+      }
+      
+      // Animation setup
+      document.querySelectorAll('.benefit-item, .month-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

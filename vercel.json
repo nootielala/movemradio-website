@@ -1,0 +1,41 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/elite-artists", "destination": "/elite-artists.html" },
+    { "source": "/radio", "destination": "/radio.html" },
+    { "source": "/home", "destination": "/home.html" },
+    { "source": "/elite-artist-program", "destination": "/elite-artist-program.html" },
+    { "source": "/movemradiotv", "destination": "/movemradiotv.html" },
+    { "source": "/music-submission", "destination": "/music-submission.html" }
+  ],
+  "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

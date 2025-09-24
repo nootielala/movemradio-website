@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOV'EM RADIO - Your Global Music Destination with Elite Artists & 24/7 Streaming" />
+  <title>MOV'EM RADIO | Your Global Music Destination</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="MOV'EM RADIO Home" style="font-size: 1rem;">
+      <a href="home.html">MOV'EM<span style="color: #ff0000;">RADIO</span></a>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <ul id="navMenu">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="elite-artists.html">Elite Artists</a></li>
+        <li><a href="radio.html">livestream</a></li>
+        <li><a href="movemradiotv.html">MOV'EMRADIOTV</a></li>
+        <li><a href="elite-artist-program.html">Program</a></li>
+        <li><a href="music-submission.html">Submit Music</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="content">
+    <!-- Centered Hero Section with Enhanced Red Glowing Effects -->
+    <section class="hero-section" aria-labelledby="heroHeading" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #000000 0%, #1a0000 30%, #330000 50%, #1a0000 70%, #000000 100%); position: relative; overflow: hidden;">
+      <!-- Enhanced Background effects -->
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.3), transparent 70%); mix-blend-mode: screen;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(255, 0, 0, 0.2), transparent 50%); mix-blend-mode: multiply;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 70%, rgba(255, 0, 0, 0.15), transparent 60%); mix-blend-mode: screen;"></div>
+      
+      <div class="hero-content" style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+        <!-- MOV'EM RADIO Logo as Main Logo -->
+        <div class="main-logo" style="margin-bottom: 3rem;">
+          <img src="img/movem-radio-logo.png" alt="MOV'EM RADIO" style="max-width: 600px; width: 100%; height: auto; filter: drop-shadow(0 8px 32px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.4));" />
+        </div>
+        
+        <h1 id="heroHeading" style="font-size: clamp(2.5rem, 6vw, 4rem); margin: 0 0 1rem; letter-spacing: 1px; color: #ffffff; text-shadow: 0 4px 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);">YOU SEND'EM WE MOV'EM</h1>
+        <p class="hero-subtitle" style="font-size: 1.5rem; color: #ff0000; font-weight: bold; margin-bottom: 2rem; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);">Your Global Music Destination</p>
+        <p class="hero-description" style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 3rem; color: #cccccc; max-width: 600px; margin-left: auto; margin-right: auto; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);">
+          Discover elite artists, enjoy 24/7 streaming, and be part of a worldwide music community. 
+          Upload your tracks, explore diverse playlists, and experience music without boundaries.
+        </p>
+        <div class="hero-actions" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          <a href="elite-artists.html" class="cta-btn primary" style="background: linear-gradient(90deg, #ff0000, #cc0000); color: #ffffff; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3), 0 0 50px rgba(255, 0, 0, 0.2); transition: all 0.3s ease; border: 2px solid #ff0000; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);">🎨 Discover Elite Artists</a>
+          <a href="radio.html" class="cta-btn secondary" style="background: transparent; color: #ff0000; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid #ff0000; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 0, 0, 0.1); text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);">📻 Listen Live</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" aria-labelledby="featuresHeading">
+      <div class="container">
+        <h2 id="featuresHeading">What Makes MOV'EM RADIO Special</h2>
+        
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎵</div>
+            <h3>Elite Artists</h3>
+            <p>Discover carefully curated elite artists, each with their own unique style, bio, and personal radio stream. Upload tracks to their collections and become part of their musical journey.</p>
+            <a href="elite-artists.html" class="feature-link">Meet Our Artists →</a>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">📻</div>
+            <h3>24/7 Radio Streaming</h3>
+            <p>Never stop the music! Our continuous radio streams feature elite artist collections, user uploads, and curated playlists for every mood and moment.</p>
+            <a href="radio.html" class="feature-link">Listen Now →</a>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">⬆️</div>
+            <h3>Music Upload Platform</h3>
+            <p>Share your creativity with the world. Upload your tracks to artist collections and have them featured on our 24/7 radio streams. Quality music, global audience.</p>
+            <a href="elite-artists.html" class="feature-link">Upload Music →</a>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Global Community</h3>
+            <p>Connect with music lovers worldwide. Our platform celebrates diversity and brings together artists and listeners from every corner of the globe.</p>
+            <a href="about.html" class="feature-link">Our Mission →</a>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🎧</div>
+            <h3>Curated Playlists</h3>
+            <p>Each elite artist maintains carefully crafted playlists that reflect their musical vision. Discover new sounds and rediscover classics through their perspective.</p>
+            <a href="elite-artists.html" class="feature-link">Browse Playlists →</a>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">💫</div>
+            <h3>Interactive Experience</h3>
+            <p>More than just listening - participate, contribute, and shape the musical landscape. Your uploads and engagement help create the MoveM Radio experience.</p>
+            <a href="elite-artists.html" class="feature-link">Get Involved →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section" aria-labelledby="statsHeading">
+      <div class="container">
+        <h2 id="statsHeading">MoveM Radio by the Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" id="homeListeners">1,247</span>
+            <span class="stat-label">Active Listeners</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Elite Artists</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number" id="homeTracks">24</span>
+            <span class="stat-label">Featured Tracks</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number" id="homeUploads">0</span>
+            <span class="stat-label">User Uploads Today</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Hours Streaming</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Countries Reached</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section" aria-labelledby="ctaHeading">
+      <div class="container">
+        <h2 id="ctaHeading">Ready to Experience MoveM Radio?</h2>
+        <p>Join our global community of music lovers and creators</p>
+        <div class="cta-actions">
+          <a href="elite-artists.html" class="cta-btn primary">Start Exploring</a>
+          <a href="radio.html" class="cta-btn secondary">Listen Live</a>
+          <a href="about.html" class="cta-btn tertiary">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>MoveM Radio</h3>
+        <p>Your global music destination</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="elite-artists.html">Elite Artists</a></li>
+          <li><a href="radio.html">Radio</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>Join our community and share your music with the world</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 MoveM Radio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sample artist data for preview
+    const eliteArtists = [
+      {
+        id: 1,
+        name: "Echo Dreamer",
+        genre: "Ambient Electronic",
+        bio: "Creating ethereal soundscapes that transport listeners to otherworldly dimensions.",
+        image: "img/artist1.jpg",
+        tracks: 8
+      },
+      {
+        id: 2,
+        name: "Rhythm Sage",
+        genre: "World Fusion",
+        bio: "Blending traditional instruments with modern beats from across the globe.",
+        image: "img/artist2.jpg",
+        tracks: 12
+      },
+      {
+        id: 3,
+        name: "Neon Pulse",
+        genre: "Synthwave",
+        bio: "Retro-futuristic sounds that capture the essence of digital dreams.",
+        image: "img/artist3.jpg",
+        tracks: 6
+      },
+      {
+        id: 4,
+        name: "Soul Architect",
+        genre: "Neo-Soul Jazz",
+        bio: "Building emotional landscapes through jazz-inspired compositions.",
+        image: "img/artist4.jpg",
+        tracks: 10
+      },
+      {
+        id: 5,
+        name: "Cosmic Wanderer",
+        genre: "Psychedelic Rock",
+        bio: "Exploring the universe through mind-expanding musical journeys.",
+        image: "img/artist5.jpg",
+        tracks: 9
+      },
+      {
+        id: 6,
+        name: "Digital Nomad",
+        genre: "Lo-Fi Hip-Hop",
+        bio: "Creating the perfect soundtrack for focused work and peaceful moments.",
+        image: "img/artist6.jpg",
+        tracks: 15
+      }
+    ];
+
+    // Navigation toggle
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const navToggle = document.querySelector('.nav-toggle');
+      
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    // Load artists preview from API
+    async function loadArtistsPreview() {
+      const container = document.getElementById('artistsPreview');
+      
+      try {
+        // Try to fetch from API first
+        const response = await fetch('http://localhost:3000/api/artists');
+        const artists = response.ok ? await response.json() : eliteArtists;
+        
+        // Clear container
+        container.innerHTML = '';
+        
+        artists.forEach(artist => {
+          const artistCard = document.createElement('div');
+          artistCard.className = 'artist-preview-card';
+          artistCard.innerHTML = `
+            <div class="artist-preview-info">
+              <h3>${artist.name}</h3>
+              <p class="artist-genre">${artist.genre}</p>
+              <p class="artist-bio-preview">${artist.bio}</p>
+              <div class="artist-stats">
+                <span class="track-count">${artist.playlist ? artist.playlist.length : artist.tracks || 0} tracks</span>
+              </div>
+            </div>
+          `;
+          
+          // Add click handler to navigate to elite artists page
+          artistCard.addEventListener('click', () => {
+            window.location.href = 'elite-artists.html';
+          });
+          
+          container.appendChild(artistCard);
+        });
+        
+        console.log('Artists loaded from API successfully');
+      } catch (error) {
+        console.log('Failed to load from API, using fallback data:', error);
+        // Fallback to static data
+        loadStaticArtistsPreview();
+      }
+    }
+    
+    // Fallback function for static artist loading
+    function loadStaticArtistsPreview() {
+      const container = document.getElementById('artistsPreview');
+      container.innerHTML = '';
+      
+      eliteArtists.forEach(artist => {
+        const artistCard = document.createElement('div');
+        artistCard.className = 'artist-preview-card';
+        artistCard.innerHTML = `
+          <div class="artist-preview-info">
+            <h3>${artist.name}</h3>
+            <p class="artist-genre">${artist.genre}</p>
+            <p class="artist-bio-preview">${artist.bio}</p>
+            <div class="artist-stats">
+              <span class="track-count">${artist.tracks} tracks</span>
+            </div>
+          </div>
+        `;
+        
+        artistCard.addEventListener('click', () => {
+          window.location.href = 'elite-artists.html';
+        });
+        
+        container.appendChild(artistCard);
+      });
+    }
+
+    // Update stats with API data
+    async function updateHomeStats() {
+      try {
+        // Try to fetch real stats from API
+        const response = await fetch('http://localhost:3000/api/stats');
+        if (response.ok) {
+          const stats = await response.json();
+          
+          // Update with real data
+          document.getElementById('homeListeners').textContent = stats.listeners.toLocaleString();
+          document.getElementById('homeUploads').textContent = stats.uploads;
+          document.getElementById('homeTracks').textContent = stats.tracks;
+          
+          console.log('Stats updated from API');
+          return;
+        }
+      } catch (error) {
+        console.log('API stats fetch failed, using simulation:', error);
+      }
+      
+      // Fallback to simulation
+      const listeners = document.getElementById('homeListeners');
+      const uploads = document.getElementById('homeUploads');
+      
+      // Simulate changing listener count
+      const currentListeners = parseInt(listeners.textContent.replace(',', ''));
+      const change = Math.floor(Math.random() * 20) - 10; // -10 to +10
+      const newCount = Math.max(1000, currentListeners + change);
+      listeners.textContent = newCount.toLocaleString();
+      
+      // Simulate upload count
+      const currentUploads = parseInt(uploads.textContent);
+      if (Math.random() > 0.98) { // 2% chance to increment
+        uploads.textContent = currentUploads + 1;
+      }
+    }
+
+    // Add smooth scrolling for anchor links
+    function initSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load artists preview
+      loadArtistsPreview();
+      
+      // Update stats periodically
+      setInterval(updateHomeStats, 7000); // Every 7 seconds
+      
+      // Initialize smooth scrolling
+      initSmoothScrolling();
+      
+      // Close mobile nav when clicking on links
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('navMenu').classList.remove('open');
+          document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+        });
+      });
+      
+      // Add fade-in animation for feature cards
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      // Observe feature cards for animation
+      document.querySelectorAll('.feature-card, .artist-preview-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<section class="page-section about" aria-labelledby="aboutHeading">
+  <div class="container">
+    <h1 id="aboutHeading">About Mov'em Radio</h1>
+    
+    <!-- Mission Statement -->
+    <div class="mission-statement" style="background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+      <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent); margin-bottom: 2rem;">
+        We are an INDEPENDENT Radio Station Dedicated to Playing and Supporting INDEPENDENT Artists AND THEIR MUSIC.
+      </p>
+      
+      <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+        Created in Las Vegas, Nevada to display the Determination, Drive and Hunger of INDEPENDENT Artists 
+        that is no longer found in main-stream music. Our goal is to give these highly talented artists a 
+        broader marketing venue and make INDEPENDENT music <strong style="color: #FFD700;">The New Main-Stream</strong>.
+      </p>
+      
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem; margin-top: 1.5rem;">
+        <h3 style="color: #FFD700; font-size: 1.5rem; margin-bottom: 0.5rem;">@ MOV'EM RADIO</h3>
+        <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent); font-style: italic; margin: 1rem 0;">
+          "YOU SEND'EM WE MOV'EM"
+        </p>
+        <p style="font-size: 1.2rem; color: #FFD700; font-weight: bold;">
+          LET'S GO!!!
+        </p>
+      </div>
+    </div>
+    
+    <h2>Core Values</h2>
+    <ul class="values-list">
+      <li ng-repeat="v in values track by $index">{{v}}</li>
+    </ul>
+    
+    <p>
+      MoveM Radio is building an immersive platform spotlighting genre‑bending artists and sonic storytellers.
+      This space will evolve with live sessions, interviews, editorial features, and community‑driven discovery tools.
+    </p>
+
+    <div class="about-features">
+      <h2>What Makes Us Different</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>🎨 Elite Artist Platform</h3>
+          <p>Our curated selection of elite artists each have dedicated spaces with bios, playlists, and personal radio streams. Listeners can even contribute their own music to artist playlists.</p>
+          <a href="#/elite-artists" class="feature-link">Meet Our Artists →</a>
+        </div>
+        
+        <div class="feature-item">
+          <h3>📻 24/7 Streaming</h3>
+          <p>Continuous music streaming with live shows, artist takeovers, and interactive features that keep you connected to the music community.</p>
+          <a href="#/radio" class="feature-link">Start Listening →</a>
+        </div>
+        
+        <div class="feature-item">
+          <h3>🌍 Global Community</h3>
+          <p>Connecting listeners worldwide through boundary-pushing music that transcends genres and geographical limitations.</p>
+          <a href="#/" class="feature-link">Join the Movement →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About MoveM Radio - Elite Artists, Music Culture & Streaming" />
+  <title>About Us | MOV'EM RADIO</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <style>
+    /* Enhanced Red & Black Theme for About Page */
+    body {
+      background: linear-gradient(135deg, #000000 0%, #1a0000 30%, #330000 50%, #1a0000 70%, #000000 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.1), transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .page-section.about {
+      background: transparent;
+      position: relative;
+      padding: 3rem 0;
+    }
+    
+    .page-section.about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 0, 0, 0.15), transparent 60%);
+      pointer-events: none;
+    }
+    
+    #aboutHeading {
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .mission-statement {
+      background: rgba(255, 0, 0, 0.1);
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 0, 0, 0.1);
+    }
+    
+    .mission-statement p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ff0000;
+      text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+    
+    .mission-statement h3 {
+      color: #FFD700;
+      font-size: 1.5rem;
+      text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+    }
+    
+    .page-section h2 {
+      color: #ff0000;
+      text-shadow: 0 2px 15px rgba(255, 0, 0, 0.6);
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 0 2rem 0;
+    }
+    
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .values-list li {
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+    
+    .values-list li:hover {
+      background: rgba(255, 0, 0, 0.2);
+      border-color: #ff0000;
+      box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+      transform: translateY(-3px);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .feature-item {
+      background: rgba(255, 0, 0, 0.05);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+    }
+    
+    .feature-item:hover {
+      background: rgba(255, 0, 0, 0.1);
+      border-color: #ff0000;
+      box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4);
+      transform: translateY(-5px);
+    }
+    
+    .feature-item h3 {
+      color: #ff0000;
+      text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-item p {
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-link {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #ff0000;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      text-shadow: 0 1px 5px rgba(255, 0, 0, 0.3);
+    }
+    
+    .feature-link:hover {
+      background: #ff0000;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="MOV'EM RADIO Home">
+      <a href="home.html">MOV'EM<span style="color: #ff0000;">RADIO</span></a>
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <ul id="navMenu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="elite-artists.html">Elite Artists</a></li>
+        <li><a href="radio.html">Radio</a></li>
+        <li><a href="movemradiotv.html">MOV'EMRADIOTV</a></li>
+        <li><a href="elite-artist-program.html">Program</a></li>
+        <li><a href="music-submission.html">Submit Music</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="content">
+    <section class="page-section about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <h1 id="aboutHeading">About MOV'EM RADIO</h1>
+        
+        <!-- Enhanced Mission Statement -->
+        <div class="mission-statement">
+          <p>We are an INDEPENDENT Radio Station Dedicated to Playing and Supporting INDEPENDENT Artists AND THEIR MUSIC.</p>
+          
+          <div style="border-top: 1px solid rgba(255, 0, 0, 0.3); padding-top: 1.5rem; margin-top: 1.5rem;">
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: #cccccc;">
+              Created in Las Vegas, Nevada to display the Determination, Drive and Hunger of INDEPENDENT Artists 
+              that is no longer found in main-stream music. Our goal is to give these highly talented artists a 
+              broader marketing venue and make INDEPENDENT music <strong style="color: #FFD700;">The New Main-Stream</strong>.
+            </p>
+            
+            <h3>@ MOV'EM RADIO</h3>
+            <p style="font-size: 1.3rem; font-weight: bold; color: #ff0000; font-style: italic; margin: 1rem 0; text-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);">
+              "YOU SEND'EM WE MOV'EM"
+            </p>
+            <p style="font-size: 1.2rem; color: #FFD700; font-weight: bold; text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);">
+              LET'S GO!!!
+            </p>
+          </div>
+        </div>
+        
+        <h2>Core Values</h2>
+        <ul class="values-list">
+          <li>Authenticity</li>
+          <li>Community</li>
+          <li>Innovation</li>
+          <li>Cultural Impact</li>
+        </ul>
+        
+        <p style="color: #cccccc; line-height: 1.6; text-align: center; margin: 3rem 0; font-size: 1.1rem;">
+          MOV'EM RADIO is building an immersive platform spotlighting genre‑bending independent artists and sonic storytellers.
+          This space evolves with live sessions, interviews, editorial features, and community‑driven discovery tools that 
+          give independent music the platform it deserves.
+        </p>
+
+        <div class="about-features">
+          <h2>What Makes Us Different</h2>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <h3>🎨 Elite Artist Platform</h3>
+              <p>Our curated selection of independent elite artists each have dedicated spaces with bios, playlists, and personal radio streams. Listeners can contribute their own music to artist playlists and become part of the movement.</p>
+              <a href="elite-artists.html" class="feature-link">Meet Our Artists →</a>
+            </div>
+            
+            <div class="feature-item">
+              <h3>📻 24/7 Independent Streaming</h3>
+              <p>Continuous independent music streaming with live shows, artist takeovers, and interactive features that keep you connected to the underground music community.</p>
+              <a href="radio.html" class="feature-link">Start Listening →</a>
+            </div>
+            
+            <div class="feature-item">
+              <h3>🌍 Independent Music Movement</h3>
+              <p>Connecting independent artists and listeners worldwide through boundary-pushing music that challenges the mainstream and celebrates artistic freedom.</p>
+              <a href="elite-artist-program.html" class="feature-link">Join the Program →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-team">
+          <h2>Our Mission</h2>
+          <div class="mission-content">
+            <p>At MoveM Radio, we believe music is a universal language that breaks down barriers and creates connections. Our platform is designed to:</p>
+            <ul>
+              <li><strong>Amplify Emerging Voices:</strong> Provide a stage for underground and independent artists</li>
+              <li><strong>Foster Community:</strong> Create spaces where music lovers can discover and share</li>
+              <li><strong>Push Boundaries:</strong> Showcase genre-defying and experimental sounds</li>
+              <li><strong>Build Bridges:</strong> Connect artists with audiences across the globe</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h2>Get in Touch</h2>
+          <p>Ready to join the MoveM Radio community? Send us a message!</p>
+          
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="contactName">Name:</label>
+              <input type="text" id="contactName" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactEmail">Email:</label>
+              <input type="email" id="contactEmail" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactSubject">Subject:</label>
+              <select id="contactSubject" name="subject" required>
+                <option value="">Choose a topic...</option>
+                <option value="artist-application">Artist Application</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="technical-support">Technical Support</option>
+                <option value="general">General Question</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactMessage">Message:</label>
+              <textarea id="contactMessage" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn" class="submit-btn">Send Message</button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+
+        <div class="cta-section">
+          <h2>Ready to Explore?</h2>
+          <p>Discover what makes MoveM Radio unique - from our elite artists to interactive features.</p>
+          <div class="cta-buttons">
+            <a href="elite-artists.html" class="cta-btn">Discover Artists</a>
+            <a href="radio.html" class="cta-btn cta-secondary">Listen Live</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 MoveM Radio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const navToggle = document.querySelector('.nav-toggle');
+      
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    }
+
+    // Handle contact form submission with API integration
+    async function handleContactForm(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const submitBtn = document.getElementById('submitBtn');
+      const formStatus = document.getElementById('formStatus');
+      const formData = new FormData(form);
+      
+      // Show loading state
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+      
+      try {
+        // Try to submit to API
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+          })
+        });
+        
+        if (response.ok) {
+          const result = await response.json();
+          formStatus.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+          formStatus.className = 'form-status success';
+          form.reset();
+          console.log('Contact form submitted successfully:', result);
+        } else {
+          throw new Error('Server responded with error');
+        }
+      } catch (error) {
+        console.log('API submission failed, using fallback:', error);
+        // Fallback behavior - show success but log for manual follow-up
+        formStatus.textContent = 'Message received! We\'ll get back to you soon. (Note: Currently in demo mode)';
+        formStatus.className = 'form-status success';
+        form.reset();
+      }
+      
+      // Reset submit button
+      submitBtn.textContent = 'Send Message';
+      submitBtn.disabled = false;
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set up contact form
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+      }
+    });
+
+    // Close mobile nav when clicking on links
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('open');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

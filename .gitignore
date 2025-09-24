@@ -1,0 +1,34 @@
+# Only include essential website files
+# Ignore everything first
+*
+
+# Then include only what we need for the website
+!index.html
+!about.html
+!elite-artists.html
+!radio.html
+!home.html
+!elite-artist-program.html
+!movemradiotv.html
+!music-submission.html
+
+# Include CSS and JS
+!css/
+!css/styles.css
+!js/
+!js/app.js
+
+# Include images
+!img/
+!img/**
+
+# Include partials
+!partials/
+!partials/**
+
+# Include this gitignore and readme
+!.gitignore
+!README.md
+
+# Vercel deployment config
+!vercel.json
